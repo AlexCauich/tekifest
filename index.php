@@ -26,13 +26,18 @@
             <form class="form-inline my-2 my-lg-0">
                 <ul class="navbar-nav  mr-auto mt-2 mt-lg-0 ">
                     <li class="nav-link">
-                        <a class="nav-link active" href="nav/tekifestv.html">Resultados tekifest virtual</a>
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Virtual
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="nav/TekifestVirtual.html">Tekifest Virtual</a>
+                                <a class="dropdown-item" href="nav/tekifestv.html">Resultados tekifest virtual</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-link">
                         <a class="nav-link active" href="nav/Contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-link">
-                        <a class="nav-link active" href="nav/TekifestVirtual.html">Tekifest Virtual</a>
                     </li>
                     <li class="nav-link">
                         <a class="nav-link active" href="nav/Reglamento TEKIFEST v-1.5.pdf">Reglamento</a>
