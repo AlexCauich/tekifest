@@ -26,6 +26,9 @@
             <form class="form-inline my-2 my-lg-0">
                 <ul class="navbar-nav  mr-auto mt-2 mt-lg-0 ">
                     <li class="nav-link">
+                        <a class="nav-link active" href="nav/tekifestv.html">Resultados tekifest virtual</a>
+                    </li>
+                    <li class="nav-link">
                         <a class="nav-link active" href="nav/Contacto.html">Contacto</a>
                     </li>
                     <li class="nav-link">
