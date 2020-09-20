@@ -1,0 +1,7 @@
+[29-Aug-2020 23:15:55 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/tklaracing/public_html/tekifest.org/auth/logout.php on line 7
+[29-Aug-2020 23:18:21 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/tklaracing/public_html/tekifest.org/auth/logout.php on line 7
+[30-Aug-2020 16:31:09 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/tklaracing/public_html/tekifest.org/auth/logout.php on line 7
+[31-Aug-2020 15:42:24 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/tklaracing/public_html/tekifest.org/auth/logout.php on line 7
+[31-Aug-2020 15:56:38 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/tklaracing/public_html/tekifest.org/auth/logout.php on line 7
+[31-Aug-2020 16:05:33 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/tklaracing/public_html/tekifest.org/auth/logout.php on line 7
+[31-Aug-2020 19:32:25 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/tklaracing/public_html/tekifest.org/auth/logout.php on line 7

@@ -1,0 +1,72 @@
+a .btn-i{
+    color: white;
+}
+
+.logo img {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modalimg img {
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+@media screen and ( max-width: 300px){
+    body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;    
+    }
+
+
+    .logo img {
+        width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .modalimg img {
+        width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    
+    }
+    
+        
+}
+
+
+@media screen and ( max-width: 900px){
+    body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        /*background: red;*/
+    }
+
+    .logo img {
+        width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .modalimg img {
+        width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    
+    }
+    
+    .sec2 {
+        margin-top: 16px;
+    }
+
+    
+}

@@ -1,0 +1,34 @@
+.body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+
+.logo {
+    padding: 40px;
+    
+}
+
+.logo {
+    justify-items: center;
+    width: 100%;
+}
+
+
+
+.logo img {
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*.logo h4 {
+    text-align: center;
+    margin-top: 10px;
+}*/
+
+input {
+    font-size: 10px;
+}
+
