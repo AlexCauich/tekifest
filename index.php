@@ -36,7 +36,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-link">
+                    <li class="nav-link">  
                         <a class="nav-link active" href="nav/Contacto.html">Contacto</a>
                     </li>
                     <li class="nav-link">
@@ -175,6 +175,9 @@
                                 <div class="form-group">
                                     <input type="submit" class="btn btn-success btn-block btn-sm" value="Vueltas mas rapidas de cada piloto" name="m" />  
                                 </div>
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-success btn-block btn-sm" value="Vueltas mas rapidas por automivil" name="v_a" />  
+                                </div>
                                 
                             </form>
                                 
@@ -216,18 +219,18 @@
 
                     ?>
                         <div class="form-group mt-3">
-                            <p> <strong> Track :  </strong> <?php echo $data['id_track']; ?> </p>
+                            <p> <strong> Pista :  </strong> <?php echo $data['id_track']; ?> </p>
                         </div>
                     <?php } ?>
 
                     <table class="table table-striped table-bordered">
                         <thead class="bordere">
                             <tr>
-                                <th>Name pilot</th>
-                                <th>Category</th>
-                                <th>Pilot Record</th>
-                                <th>Brand</th>
-                                <th>Model</th>
+                                <th>Nombre del piloto</th>
+                                <th>Categoria</th>
+                                <th>Registros del piloto</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -237,7 +240,7 @@
                                 <td width="180px"><?php echo $row['category']; ?></td>
                                 <td width="180px">
                                     <a href="show_records.php?id_pilot=<?php echo $row['id_pilot']; ?>" class="btn btn-info">
-                                        Pilot Records
+                                        Registros del piloto
                                     </a>
                                 </td>
                                 <td><?php echo $row['brand']; ?></td>
@@ -269,18 +272,18 @@
 
                     ?>
                         <div class="form-group">
-                            <p> <strong> Track :  </strong> <?php echo $data['id_track']; ?> </p>
+                            <p> <strong> Pista :  </strong> <?php echo $data['id_track']; ?> </p>
                         </div>
                     <?php } ?>
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>Name pilot</th>
-                                <th>Category</th>
-                                <th>Lap</th>
-                                <th>Lap time</th>
-                                <th>Brand</th>
-                                <th>Model</th>
+                                <th>Nombre del piloto</th>
+                                <th>Categoria</th>
+                                <th>Vuelta</th>
+                                <th>Tiempo de vuelta</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -341,19 +344,19 @@
 
                     ?>
                         <div class="form-group">
-                            <p> <strong> Track :  </strong> <?php echo $data['id_track']; ?> </p>
+                            <p> <strong> Pista :  </strong> <?php echo $data['id_track']; ?> </p>
                         </div>
                     <?php } ?>
                     
                     <table class="table table-striped ">
                         <thead>
                             <tr>
-                                <th>Name pilot</th>
-                                <th>Category</th>
-                                <th>Lap</th>
-                                <th>Lap time</th>
-                                <th>Brand</th>
-                                <th>Model</th>
+                                <th>Nombre del piloto</th>
+                                <th>Categoria</th>
+                                <th>Vuelta</th>
+                                <th>Tiempo de vuelta</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
                                
                             </tr>
                         </thead>
@@ -420,8 +423,8 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>Tracks</th>
-                                <th>Records</th>
+                                <th>Pista</th>
+                                <th>Registros</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -430,7 +433,7 @@
                                 <td width="210px"><?php echo $row['name_track']; ?></td>
                                 <td width="210px">
                                     <a href="vre.php?name_track=<?php echo $row['name_track']; ?>" class="btn btn-info">
-                                        Records
+                                        Registros
                                     </a>
                                 </td>
                             </tr>
@@ -458,14 +461,14 @@
                 <table class="table table-striped mt-3">
                     <thead>
                         <tr>
-                            <th>Name pilot</th>
-                            <th>Category</th>
-                            <th>Lap</th>
-                            <th>Lap time</th>
-                            <th>Brand</th>
-                            <th>Model</th>
-                            <th>Track</th>
-                            <th>Event Date</th>
+                            <th>Nombre del piloto</th>
+                            <th>Categoria</th>
+                            <th>Vuelta</th>
+                            <th>Tiempo de vuelta</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Pista</th>
+                            <th>Fecha de evento</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -503,8 +506,8 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Name pilot</th>
-                            <th>Records</th>
+                            <th>Nombre del piloto</th>
+                            <th>Registros</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -514,6 +517,45 @@
                             <td>
                                 <a class="btn btn-info" href="pilots.php?name_pilot=<?php echo $row['name_pilot']; ?>">Records</a>
                             </td>
+                        </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+                <?php } ?>
+
+                <?php 
+                include('server/connection.php');
+                if(isset($_POST['v_a'])){
+
+                    $query = "SELECT lap, lap_time, P.brand, P.model, T.name_track FROM records 
+                    INNER JOIN pilots P ON records.id_pilot = P.id_pilot
+                    INNER JOIN tracks T ON records.id_track = T.name_track
+                    where lap_time = ANY(Select min(lap_time) from records inner JOIN tracks T ON records.id_track = T.name_track where lap_time > '00.00:00.000' GROUP BY T.name_track)";
+                    $result = mysqli_query($db, $query);
+                
+                    if(!$result){
+                        die("Query error");
+                    }
+            
+                ?>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Autodromo</th>
+                            <th>Automovil</th>
+                            <th>Vuelta</th>
+                            <th>Tiempo de vuelta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php while($row = mysqli_fetch_array($result)){ ?>
+                        <tr>
+                            <td><?php echo $row['name_track']; ?></td>
+                            <td>
+                                    <?php echo $row['brand']; ?> <?php echo $row['model']; ?>
+                            </td>
+                            <td><?php echo $row['lap']; ?></td>
+                            <td><?php echo $row['lap_time']; ?></td>
                         </tr>
                         <?php } ?>
                     </tbody>
